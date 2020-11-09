@@ -1,9 +1,12 @@
 
-let menu = document.getElementsByClassName("menu")[0];
-let burger = document.getElementById("burger");
-let burgerSpan1 = document.getElementsByClassName('bar1')[0];
-let burgerSpan2 = document.getElementsByClassName('bar2')[0];
-let burgerSpan3 = document.getElementsByClassName('bar3')[0];
+let menu = document.getquerySelector(".menu");
+let burger = document.querySelector("#burger");
+let burgerSpan1 = document.querySelector('bar1');
+let burgerSpan2 = document.querySelector('bar2');
+let burgerSpan3 = document.querySelector('bar3');
+let slide = document.querySelector('.s1');
+let slides = document.querySelector('.slides');
+
 
 burger.onclick = function openMenu(){
     menu.classList.toggle('showmenu');
@@ -12,6 +15,23 @@ burger.onclick = function openMenu(){
     burgerSpan3.classList.toggle('change');
     burger.classList.toggle('fix');
 }
+
+
+let cliXdown = 0;
+let cliXup = 0;
+
+slides.addEventListener('mousedown', function(event){
+   cliXdown = event.clientX;
+})
+slides.addEventListener('mouseup', function(event){
+  cliXup = event.clientX;
+  if (cliXup < cliXdown) {
+    slides.style.marginLeft += 33 + 'px';
+  } 
+  else if (cliXup > cliXdown) {
+    slides.style.marginLeft -= 33 + 'px';
+  } 
+})
 
 
 
