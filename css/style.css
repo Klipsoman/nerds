@@ -79,7 +79,7 @@ inner*/
 	height: 100%;
 	overflow: hidden;
 	position: relative;
-
+	user-select: none;
 }
 
 .navigation{
@@ -120,6 +120,9 @@ input[name="r"]{
 	display: flex;
 }
 
+.slide img{
+	pointer-events: none;
+}
 
 
 .slide_items{
@@ -157,7 +160,6 @@ input[name="r"]{
 	color: gray;
 	
 }
-
 
 
 #r1:checked ~ .s1{
