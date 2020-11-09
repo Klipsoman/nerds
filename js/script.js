@@ -26,10 +26,10 @@ slides.addEventListener('mousedown', function(event){
 slides.addEventListener('mouseup', function(event){
   cliXup = event.clientX;
   if (cliXup < cliXdown) {
-    slide.style.marginLeft += 33 + 'px';
+    slide.style.marginLeft += 33 + '%';
   } 
   else if (cliXup > cliXdown) {
-    slide.style.marginLeft -= 33 + 'px';
+    slide.style.marginLeft -= 33 + '%';
   } 
 })
 
