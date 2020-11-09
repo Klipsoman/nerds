@@ -1,5 +1,5 @@
 
-let menu = document.getquerySelector(".menu");
+let menu = document.querySelector(".menu");
 let burger = document.querySelector("#burger");
 let burgerSpan1 = document.querySelector('bar1');
 let burgerSpan2 = document.querySelector('bar2');
